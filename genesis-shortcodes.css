@@ -1,0 +1,68 @@
+/* Buttons
+------------------------------------------------------------ */
+
+.button {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 16px 24px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.button:hover {
+    background: #666;
+}
+
+/* Code
+------------------------------------------------------------ */
+
+code {
+    font-family: monospace,serif;
+    font-size:1em
+}
+
+/* Content Boxes
+------------------------------------------------------------ */
+
+.content-box-blue,
+.content-box-gray,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.content-box-blue {
+    background-color: #d8ecf7;
+    border: 1px solid #afcde3;
+}
+
+.content-box-gray {
+    background-color: #e2e2e2;
+    border: 1px solid #bdbdbd;
+}
+
+.content-box-green {
+    background-color: #d9edc2;
+    border: 1px solid #b2ce96;
+}
+
+.content-box-purple {
+    background-color: #e2e2f9;
+    border: 1px solid #bebde9;
+}
+
+.content-box-red {
+    background-color: #f9dbdb;
+    border: 1px solid #e9b3b3;
+}
+
+.content-box-yellow {
+    background-color: #fef5c4;
+    border: 1px solid #fadf98;
+}

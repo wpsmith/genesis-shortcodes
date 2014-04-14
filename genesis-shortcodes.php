@@ -1058,7 +1058,6 @@ function gsc_five_sixths_last_shortcode( $atts, $content ) {
 	return gsc_column_shortcode( 'five-sixths last', $content, $atts );
 }
 
-add_shortcode( 'plugin_info', 'gsc_plugin_info_shortcode' );
 /**
  * Genesis Get Plugin Information.
  *
@@ -1154,4 +1153,57 @@ function gsc_plugin_info_shortcode( $atts, $content ) {
 		return $readme->sections[ $section ];
     }
     return '';
+}
+
+/**
+ * Genesis Button Shortcode
+ *
+ * Supported shortcode attributes are:
+ *   link, target
+ *
+ * @param	array  $atts Shortcode attributes
+ * @return	string       Link with anchor text
+ */
+add_shortcode( 'button', 'gsc_button_shortcode');
+function gsc_button_shortcode( $atts, $content = null ) {
+
+	extract( shortcode_atts( array(
+		'link' => '#',
+		'target' => '_self',
+	), $atts ) );
+    return '<a class="button" href="'. $link. '" target="'. $target . '">' . do_shortcode( $content ) . '</a>';
+
+}
+
+/**
+ * Genesis Code Shortcode
+ *
+ * @param	array  $atts Shortcode attributes
+ * @return	string       Content wrapped in `code` tags
+ */
+add_shortcode( 'code', 'gsc_code_shortcode');
+function gsc_code_shortcode( $atts, $content = null ) {
+
+    extract( shortcode_atts( array(), $atts ) );
+    return '<code>' . do_shortcode( $content ) . '</code>';
+
+}
+
+/**
+ * Genesis Content Box Shortcode
+ *
+ * Supported shortcode attributes are:
+ *   color
+ *
+ * @param	array  $atts Shortcode attributes
+ * @return	string       Content wrapped in `code` tags
+ */
+add_shortcode( 'content-box', 'gsc_content_box' );
+function gsc_content_box( $atts, $content = null ) {
+
+	extract( shortcode_atts( array(
+		'color' => 'blue'
+    ), $atts ) );
+
+   return '<div class="content-box-' . $color . '">' . do_shortcode($content) . '</div>';
 }
